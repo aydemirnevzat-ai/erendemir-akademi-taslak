@@ -220,13 +220,15 @@ body[data-d=c]{--bg:#F3EEE5;--bg2:#E7E0D3;--ink:#1D1A16;--mut:#6B645A;--line:#CF
 .kd{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(1rem,2.5vw,2.5rem)}
 .kd figure{aspect-ratio:3/4;margin-bottom:.9rem}
 .kd span{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
-.arch img,.ph{border-radius:50vw 50vw 0 0}
+.arch img,.ph{border-radius:0;box-shadow:14px 14px 0 -1px var(--bg),14px 14px 0 0 var(--acc)}
+.arch,.kd figure{margin-right:14px}
+.d .arch figcaption{margin-top:1.9rem}
 .ph{background:var(--bg2);border:1px solid var(--line);display:grid;place-items:center}
 .ph b{font:italic 400 3.2rem/1 var(--hf);color:var(--acc)}
 .ft{display:flex;flex-wrap:wrap;gap:.5rem 1.6rem;padding:2.2rem 0 1.4rem;font-size:.8rem}
 .ft a{text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:.15rem}
 html.rv .d img,html.rv .ph{opacity:0;transform:translateY(18px);clip-path:inset(0 0 14% 0);transition:opacity .9s ease,transform 1.1s cubic-bezier(.2,.7,.2,1),clip-path 1.1s cubic-bezier(.2,.7,.2,1)}
-html.rv .d img.in,html.rv .ph.in{opacity:1;transform:none;clip-path:inset(0)}
+html.rv .d img.in,html.rv .ph.in{opacity:1;transform:none;clip-path:inset(0 -20px -20px 0)}
 .hb{display:none}
 .mn{position:fixed;inset:0;z-index:60;background:var(--bg);color:var(--ink);padding:1.1rem 22px 2rem;display:flex;flex-direction:column;gap:1.6rem;overflow-y:auto;opacity:0;visibility:hidden;transform:translateX(-6%);transition:opacity .35s,transform .45s cubic-bezier(.2,.7,.2,1),visibility .35s}
 .d.open .mn{opacity:1;visibility:visible;transform:none}
